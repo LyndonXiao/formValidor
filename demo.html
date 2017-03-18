@@ -1,0 +1,22 @@
+<form id="form">
+    <div id="error"></div>
+    非空<input name="name" check="required:true" placeholder="check='required:true'"><br>
+    <div id="name_tips"></div>
+    密码（最短6，最长7位）<input type="password" name="password" check="minLen:6, maxLen:7"
+                       placeholder="check='minLen:6, maxLen:7'"><br>
+    <div id="password_tips"></div>
+    重复密码<input type="password" name="repassword" check="minLen:6, match:password" placeholder="check='match:password'">
+    <div id="repassword_tips"></div>
+    邮箱<input name="email" check="email:true" placeholder="check='email:true'"><br>
+    <div id="email_tips"></div>
+    手机号<input name="phone" check="phone:true" placeholder="check='phone:true'"><br>
+    <div id="phone_tips"></div>
+    纯数字<input name="num" check="num:true" placeholder="check='num:true'"<br>
+    <div id="num_tips"></div>
+</form>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="formValidor.js"></script>
+<script>
+    //失去焦点即检查
+    $('#form').validate();
+</script>
